@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -16,14 +18,30 @@ public class MainActivity extends AppCompatActivity {
 
         Button rollButton = (Button) findViewById(R.id.rollBtn);
 
-        ImageView leftDie = (ImageView) findViewById(R.id.leftDie);
-        ImageView rightDie = (ImageView) findViewById(R.id.rightDie);
+        final ImageView leftDie = (ImageView) findViewById(R.id.leftDie);
+        final ImageView rightDie = (ImageView) findViewById(R.id.rightDie);
+
+        final int[] diceArray = {
+                R.drawable.dice1,
+                R.drawable.dice2,
+                R.drawable.dice3,
+                R.drawable.dice4,
+                R.drawable.dice5,
+                R.drawable.dice6
+        };
 
         rollButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Log.d("Dicee", "onClick: The button has been pressed");
+
+                Random randomNumberGenerator = new Random();
+
+                leftDie.setImageResource(diceArray[randomNumberGenerator.nextInt(6)]);
+                rightDie.setImageResource(diceArray[randomNumberGenerator.nextInt(6)]);
             }
         });
+
+
     }
 }

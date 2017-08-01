@@ -33,16 +33,16 @@
             android:id="@+id/leftDie"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="20dp"
             android:layout_weight="1"
+            android:padding="20dp"
             android:src="@drawable/dice1"/>
 
         <ImageView
             android:id="@+id/rightDie"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="20dp"
             android:layout_weight="1"
+            android:padding="20dp"
             android:src="@drawable/dice2"/>
 
     </LinearLayout>
