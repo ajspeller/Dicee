@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Dicee</string>
     <string name="roll">Roll!</string>
+    <string name="las_vegas_dicee_logo">Las Vegas Dicee Logo</string>
+    <string name="left_die">Left Die</string>
+    <string name="right_die">Right Die</string>
 </resources>
